@@ -1,0 +1,12 @@
+{{extend 'layout.html'}}
+{{=FORM(INPUT(_type='file',_name='csvfile'), INPUT(_type='text',_name='nombre'),INPUT(_type='hidden',_value='definicion',_name='table'),INPUT(_type='submit',_value='Upload'))}}
+<pre>Files must follow a standard:
+-Must contain 2 fields, first one for the ID (can be empty) and the second one for the definition which must be between " ".
+-First line of the file must be the following:
+definition.id,definicion.defi
+-Both, definition and term must be in english
+-Example:
+
+definicion.id,definicion.defi
+2,"Wild Animal..."
+ </pre>
